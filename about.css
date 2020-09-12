@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Pacifico&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* header */
+header{
+    width: 100%;
+    max-height: 15vh;
+    display: flex;
+    z-index: 3;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(71, 2, 71);
+    color: #fff;
+}
+#head{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+/* logo */
+#logo{
+    height: 100%;
+    display: flex;
+}
+#logo-image{
+    width: 35%;
+    height: 100%;
+}
+#logo-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#logo-text{
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#logo-text h1{
+    font-size: 2rem;
+    font-family:monotype corsiva, 'Lora';
+    font-style: italic;
+    margin-bottom: 5px;
+}
+#logo-text p{
+    font-size: .8rem;
+    font-weight: lighter;
+}
+/* navigation */
+nav{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 11px;
+    font-size: .9rem;
+    font-family: 'Raleway','Courier New', Courier, monospace,Georgia, 'Times New Roman', Times, serif;
+    list-style: none;
+    transition: all .5s ease-in-out;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li:hover{
+    background-color: rgb(26, 2, 26);
+}
+nav ul li hr{
+    width: 0;
+    margin-top: 5px;
+    background-color: #fff;
+}
+nav ul li:hover hr{
+    animation: .5s underline 1;
+    animation-fill-mode: forwards;
+}
+.highlightedLi{
+    background-color: rgb(26, 2, 26);
+}
+nav ul .highlightedLi hr{
+    width: 100%;
+}
+.highlightedLi a{
+    color: #fff;
+}
+.highlightedLi hr{
+    width: 0;
+}
+@keyframes underline{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/* menu */
+#menu{
+    width: auto;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+#menu i{
+    padding: 15px;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+#menu i:hover{
+    background-color: rgb(42, 1, 42);
+}
+/* header ends here */
+/* style for banner */
+#banner{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+.slide_show{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 200%;
+    height: 100%;
+    animation: 10s slide infinite;
+}
+@keyframes slide{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: -0%;
+    }
+    53%{
+        left: -100%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+.slide{
+    width: 50%;
+    height: 100%;
+    left: 0;
+    position: relative;
+    top: 0;
+}
+.slider_image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slider_image img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.slider_text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+.slider_text h2{
+    border-bottom: 2px solid white;
+    font-size: 1.7rem;
+    margin: 10px;
+}
+.slider_text p{
+    line-height: 30px;
+    font-size: 1.3rem;
+}
+.slider_image::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15,.6);
+    position: absolute;
+}
+/* style for the text aniamtion */
+.slider_text h2{
+    animation: 2s fly 1;
+}
+@keyframes fly{
+    0%{
+        transform: translateX(-400%);
+    }
+    40%{
+        transform: translateY(-400%);
+    }
+    50%{
+        transform: translateX(-40%);
+    }
+    100%{
+        transform: translateX(-0%);
+    }
+}
+.slider_text p{
+    animation: 5s rotate 1;
+}
+@keyframes rotate{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    60%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    80%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* style for the text aniamtion ends here */
+/* style for banner ends here */
+/* style for about us */
+#about_us{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: justify;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+#about_us_image{
+    width: 45%;
+    height: 100%;
+}
+#about_us_image img{
+    margin-right: 25px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#about_us_text{
+    width: 45%;
+    line-height: 20px;
+    color: rgb(61, 60, 60);
+}
+#about_us_text h2{
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    color: rgb(41, 41, 41);
+}
+/* style for about us ends here */
+/* style for our clients */
+#our_clients{
+    text-align: center;
+}
+#our_clients h2{
+    font-size: 2rem;
+    margin: 15px;
+    color: rgb(61, 60, 60);
+    margin-top: 55px;
+}
+#our_clients p{
+    color: rgb(41, 41, 41);
+    line-height: 25px;
+}
+/* style for our clients ends here */
+/* style for clients pictures */
+#clients_picture{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 75%;
+    height: 100%;
+    margin: 2% auto 0 auto;
+}
+.clients_images{
+    width: 30%;
+    height: 30vh;
+    border: 2px solid rgb(131, 128, 128);
+    border-radius: 7px;
+    overflow: hidden;
+}
+#clients_picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.clients_images:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* style for clients pictures ends here */
+/* #style for our vision */
+#our_vision{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.our_vision_text{
+    text-align: justify;
+    width: 35%;
+    height: 100%;
+    margin: 50px;
+}
+.our_vision_text h3{
+    background-color: rgb(71, 2, 71);
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+/* #style for our vision ends here*/
+/* style for footer */
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 1);
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.footer_div{
+    width: 30%;
+    height: 100%;
+}
+.footer_div h3{
+    padding: 4px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.4rem;
+}
+.footer_div h4{
+    padding: 4px;
+    color: white;
+    font-size: 1.2rem;
+}
+.footer_div p{
+    padding: 4px;
+    color: white;
+    font-size: .9rem;
+}
+.name{
+    padding: 6px;
+    border-radius: 8px;
+}
+.registar_button:hover{
+    cursor: pointer;
+}
+form{
+    margin-bottom: 20px;
+}
+.footer_div i{
+    font-size: 1.9rem;
+    margin-left: 10px;
+    color:white;
+}
+/* style for footer ends here */
+/* style for copy_right */
+#copy_right{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#copy_right p{
+    padding: 15px;
+}
+#copy_right p a{
+    color: #fff;
+    text-decoration: none;
+}
+#copy_right p a:hover{
+    color: rgb(248, 175, 248);
+    text-decoration: underline;
+}
+/* #copy_right p:hover{
+    cursor: pointer;
+} */
+/* style for copy_right ends here */
+@media screen and (max-width:900px){
+    .slider_text h2{
+        font-size: 1.2rem;
+    }
+    .slider_text p{
+        font-size: 1rem;
+    }
+    #about_us_image{
+        width: 100%;
+    }
+    #about_us_text{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #about_us_text h2{
+        font-size: 1.2rem;
+    }
+    #about_us_text p{
+        font-size: 1rem;
+    }
+    #our_clients h2{
+        font-size: 1.5rem;
+    }
+    #our_clients p{
+        font-size: 1rem;
+    }
+    .clients_images{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .our_vision_text{
+        width: 100%;
+    }
+    .our_vision_text h3{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 900px){
+    #head{
+        flex-direction: column;
+        padding: 0;
+        width: 85%;
+    }
+    /* logo */
+    #logo{
+        width: 100%;
+    }
+    #logo-text h1{
+        font-size: 1.5rem;
+    }
+    #logo-text p{
+        font-size: .5rem;
+    } 
+    /* navigation */
+    nav{
+        width: 100vw;
+        height: auto;
+        background-color: #fff;
+        padding: 0;
+        margin-top: 10px;
+        display: none;
+        animation: 500ms slide-in 1;
+        transition: all .5s ease-in-out;
+    }
+    @keyframes slide-in{
+        0%{
+            width: 0;
+            transform: translateY(-50%);
+        }
+        100%{
+            width: 100vw;
+            transform: translateY(0%);
+        }
+    }
+    nav ul{
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+    }
+    nav ul li a{
+        color: #000;
+    }
+    nav ul li:hover a{
+        color: #fff;
+    }
+    nav ul li hr{
+        display: none;
+    }
+    /* menu */
+    #menu{
+        display: block;
+    }
+    .footer_div{
+        width: 80%;
+        margin: 0 auto 7% auto;
+    }
+    .footer_div h3{
+        font-size: 1.5rem;
+    }
+    .footer_div h4{
+        font-size: 1rem;
+    }
+    .footer_div p{
+        line-height: 25px;
+    }
+    #copy_right p{
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    .footer_div form .registar_button{
+        margin-top: 10px;
+    }
+}

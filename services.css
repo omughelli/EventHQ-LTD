@@ -1,0 +1,944 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Pacifico&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+/* header */
+header{
+    width: 100%;
+    max-height: 15vh;
+    display: flex;
+    z-index: 3;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(71, 2, 71);
+    color: #fff;
+}
+#head{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+/* logo */
+#logo{
+    height: 100%;
+    display: flex;
+}
+#logo-image{
+    width: 35%;
+    height: 100%;
+}
+#logo-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#logo-text{
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#logo-text h1{
+    font-size: 2rem;
+    font-family:monotype corsiva, 'Lora';
+    font-style: italic;
+    margin-bottom: 5px;
+}
+#logo-text p{
+    font-size: .8rem;
+    font-weight: lighter;
+}
+/* navigation */
+nav{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 11px;
+    font-size: .9rem;
+    font-family: 'Raleway','Courier New', Courier, monospace,Georgia, 'Times New Roman', Times, serif;
+    list-style: none;
+    transition: all .5s ease-in-out;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li:hover{
+    background-color: rgb(26, 2, 26);
+}
+nav ul li hr{
+    width: 0;
+    margin-top: 5px;
+    background-color: #fff;
+}
+nav ul li:hover hr{
+    animation: .5s underline 1;
+    animation-fill-mode: forwards;
+}
+.highlightedLi{
+    background-color: rgb(26, 2, 26);
+}
+nav ul .highlightedLi hr{
+    width: 100%;
+}
+.highlightedLi a{
+    color: #fff;
+}
+.highlightedLi hr{
+    width: 0;
+}
+@keyframes underline{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/* menu */
+#menu{
+    width: auto;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+#menu i{
+    padding: 15px;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+#menu i:hover{
+    background-color: rgb(42, 1, 42);
+}
+/* header ends here */
+/* style for slideshow */
+#banner{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+.slideshow{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 200%;
+    height: 100%;
+    animation: 10s slide infinite;
+    animation-direction: alternate;
+}
+@keyframes slide{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 0%;
+    }
+    53%{
+        left: -100%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+.slide{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.slider_image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.slider_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider_text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.slider_text p{
+    margin: 5px;
+    font-size: 1.1rem;
+}
+.slider_image::after{
+    content: '';
+    background-color: rgba(32, 31, 31, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.slider_text a button{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    background-color: rgb(71, 2, 71);
+    padding: 8px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 3px;
+}
+.slider_text button{
+    margin: 20px;
+}
+.slider_text a button:hover{
+    cursor: pointer;
+}
+.slider_text h3{
+    font-size: 2rem;
+    border-bottom: 2px solid white;
+}
+/* style for the slider text aniamtion */
+.slider_text h3{
+    animation: 5s translate 1;
+}
+@keyframes translate{
+    0%{
+        transform: translateX(-191%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+#managing{
+    animation: 2s trans 1;
+}
+@keyframes trans{
+    0%{
+        transform: translateY(-1000%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+#coordinating{
+    animation: 2s tran 1;
+}
+@keyframes tran{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+.slider_text button{
+    animation: 2s late 1;
+}
+@keyframes late{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* style for the slider text aniamtion ends here */
+/* style for slideshow ends here */
+/* style for overview */
+.overview{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.overview h2{
+    text-align: center;
+    color: rgb(39, 39, 39);
+    margin: 20px;
+}
+.overview h2 a{
+    color: rgb(71, 2, 71);
+    text-decoration: none;
+    line-height: none;
+}
+.overview hr{
+    margin-left: 47%;
+    margin-bottom: 10px;
+}
+.overview p{
+    text-align: justify;
+    color: rgb(59, 57, 57);
+    margin: 0 auto;
+}
+#eve{
+    display: flex;
+}
+#eve h4{
+    color: rgb(59, 57, 57);
+    font-size: 2.3rem;
+    margin-right: 5px;
+    color: rgb(71, 2, 71);
+}
+/* style for overview ends here */
+/* style for decoration */
+.decoration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.decor{
+    width: 34vw;
+}
+.decor{
+    margin: 40px;
+}
+.decor button{
+    padding: 10px;
+    background-color: rgb(71, 2, 71);
+    border: 1px solid white;
+    margin-top: 20px;
+    color: white;
+}
+.decor button:hover{
+    cursor: pointer;
+}
+.decor a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.decor img{
+    width: 350px;
+    height: 300px;
+    border: 2px solid rgb(71, 2, 71);
+}
+/* style for decoration ends here*/
+/* style for services */
+.services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 40px;
+    flex-wrap: wrap;
+}
+.fonts{
+    background-color: rgb(236, 236, 236);
+    height: 30vh;
+    width: 30%;
+}
+#service p{
+    line-height: 23px;
+    word-spacing: .1px;
+    letter-spacing: .4px;
+}
+/* style for services ends here */
+/* style for what we do */
+.what_we_do{
+    width: 80%;
+    margin: 0 auto;
+    line-height: 29px;
+    word-spacing: .2px;
+    letter-spacing: .4px;
+}
+.what_we_do h4{
+    margin: 20px;
+}
+.what_we_do ul li{
+    margin: 20px;
+    text-align: justify;
+}
+/* style for what we do ends here */
+/* style for text_slide */
+#text_slide{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(236, 236, 236);
+    overflow: hidden;
+}
+.slider{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    animation: 10s  slider infinite;
+    animation-direction: alternate;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 0%;
+    }
+    53%{
+        left: -100%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+.slideshow_text{
+    width: 50%;
+    height: 100%;
+    left: 0;
+    position: relative;
+    margin: 40px;
+}
+.slide_text{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.slide_text p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 25px;
+}
+.client_name{
+    margin-top: 19px;
+    font-size: 1.2rem;
+}
+/* style for text_slide end here */
+/* style for footer */
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 1);
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.footer_div h3{
+    padding: 4px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.4rem;
+}
+.footer_div h4{
+    padding: 4px;
+    color: white;
+    font-size: 1.2rem;
+}
+.footer_div p{
+    padding: 4px;
+    color: white;
+}
+.name{
+    padding: 6px;
+    border-radius: 8px;
+}
+.registar_button:hover{
+    cursor: pointer;
+}
+form{
+    margin-bottom: 20px;
+}
+.footer_div i{
+    font-size: 1.9rem;
+    margin-left: 10px;
+    color:white;
+}
+/* style for footer ends here */
+/* style for copy_right */
+#copy_right{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#copy_right p{
+    padding: 15px;
+}
+@media screen and (max-width:900px){
+    nav{
+        display: none;
+    }
+    #logo{
+        text-align: center;
+    }
+}
+/* style for slideshow */
+#banner{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+.slideshow{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 200%;
+    height: 100%;
+    animation: 10s slide infinite;
+    animation-direction: alternate;
+}
+@keyframes slide{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 0%;
+    }
+    53%{
+        left: -100%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+.slide{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.slider_image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.slider_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider_text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.slider_text p{
+    margin: 5px;
+    font-size: 1.1rem;
+}
+.slider_image::after{
+    content: '';
+    background-color: rgba(32, 31, 31, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.slider_text a button{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    background-color: rgb(71, 2, 71);
+    padding: 8px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 3px;
+}
+.slider_text button{
+    margin: 20px;
+}
+.slider_text a button:hover{
+    cursor: pointer;
+}
+.slider_text h3{
+    font-size: 2rem;
+    border-bottom: 2px solid white;
+}
+/* style for the slider text aniamtion */
+.slider_text h3{
+    animation: 5s translate 1;
+}
+@keyframes translate{
+    0%{
+        transform: translateX(-191%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+#managing{
+    animation: 2s trans 1;
+}
+@keyframes trans{
+    0%{
+        transform: translateY(-1000%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+#coordinating{
+    animation: 2s tran 1;
+}
+@keyframes tran{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+.slider_text button{
+    animation: 2s late 1;
+}
+@keyframes late{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* style for the slider text aniamtion ends here */
+/* style for slideshow ends here */
+/* style for overview */
+.overview{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.overview h2{
+    text-align: center;
+    color: rgb(39, 39, 39);
+    margin: 20px;
+}
+.overview h2 a{
+    color: rgb(71, 2, 71);
+    text-decoration: none;
+    line-height: none;
+}
+.overview p{
+    text-align: justify;
+    color: rgb(59, 57, 57);
+    margin: 0 auto;
+}
+#eve{
+    display: flex;
+}
+#eve h4{
+    color: rgb(59, 57, 57);
+    font-size: 2.3rem;
+    margin-right: 5px;
+    color: rgb(71, 2, 71);
+}
+/* style for overview ends here */
+/* style for services */
+#services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin: 8% auto;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100%;
+}
+.fonts{
+    background-color: rgb(236, 236, 236);
+    height: 20vh;
+    width: 25%;
+    padding: 5% 10px 5% 10px;
+}
+.fonts p{
+    line-height: 23px;
+    word-spacing: .1px;
+    letter-spacing: .4px;
+}
+/* style for services ends here */
+/* style for what we do */
+.what_we_do{
+    width: 80%;
+    margin: 0 auto;
+    line-height: 29px;
+    word-spacing: .2px;
+    letter-spacing: .4px;
+}
+.what_we_do h4{
+    margin: 20px;
+}
+.what_we_do ul li{
+    margin: 20px;
+}
+/* style for what we do ends here */
+/* style for text_slide */
+#text_slide{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(236, 236, 236);
+    overflow: hidden;
+}
+.slider{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    animation: 10s  slider infinite;
+    animation-direction: alternate;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 0%;
+    }
+    53%{
+        left: -100%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+.slideshow_text{
+    width: 50%;
+    height: 100%;
+    left: 0;
+    position: relative;
+    margin: 40px;
+}
+.slide_text{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.slide_text p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 25px;
+}
+.client_name{
+    margin-top: 19px;
+    font-size: 1.2rem;
+}
+/* style for text_slide end here */
+/* style for footer */
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 1);
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.footer_div{
+    width: 30%;
+    height: 100%;
+}
+.footer_div h3{
+    padding: 4px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.4rem;
+}
+.footer_div h4{
+    padding: 4px;
+    color: white;
+    font-size: 1.2rem;
+}
+.footer_div p{
+    padding: 4px;
+    color: white;
+    font-size: .9rem;
+}
+.name{
+    padding: 6px;
+    border-radius: 8px;
+}
+.registar_button:hover{
+    cursor: pointer;
+}
+form{
+    margin-bottom: 20px;
+}
+.footer_div i{
+    font-size: 1.9rem;
+    margin-left: 10px;
+    color:white;
+}
+/* style for footer ends here */
+/* style for copy_right */
+#copy_right{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#copy_right p{
+    padding: 15px;
+}
+#copy_right p a{
+    color: #fff;
+    text-decoration: none;
+}
+#copy_right p a:hover{
+    color: rgb(248, 175, 248);
+    text-decoration: underline;
+}
+/* #copy_right p:hover{
+    cursor: pointer;
+} */
+/* style for copy_right ends here */
+@media screen and (max-width:900px){
+    #banner h3{
+        font-size: .8rem;
+    }
+    #banner p{
+        font-size: .8rem;
+    }
+    .overview{
+        width: 100%;
+    }
+    .decor{
+        width: 80%;
+    }
+    .what_we_do{
+        width: 100%;
+    }
+    .fonts{
+        width: 90%;
+        margin-bottom: 5%;
+    }
+    
+    .footer_div{
+        width: 80%;
+        margin: 0 auto 7% auto;
+    }
+    .footer_div h3{
+        font-size: 1.5rem;
+    }
+    .footer_div h4{
+        font-size: 1rem;
+    }
+    .footer_div p{
+        line-height: 25px;
+    }
+    #copy_right p{
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    #head{
+        flex-direction: column;
+        padding: 0;
+        width: 85%;
+    }
+    /* logo */
+    #logo{
+        width: 100%;
+    }
+    #logo-text h1{
+        font-size: 1.5rem;
+    }
+    #logo-text p{
+        font-size: .5rem;
+    } 
+    /* navigation */
+    nav{
+        width: 100vw;
+        height: auto;
+        background-color: #fff;
+        padding: 0;
+        margin-top: 10px;
+        display: none;
+        animation: 500ms slide-in 1;
+        transition: all .5s ease-in-out;
+    }
+    @keyframes slide-in{
+        0%{
+            width: 0;
+            transform: translateY(-50%);
+        }
+        100%{
+            width: 100vw;
+            transform: translateY(0%);
+        }
+    }
+    nav ul{
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+    }
+    nav ul li a{
+        color: #000;
+    }
+    nav ul li:hover a{
+        color: #fff;
+    }
+    nav ul li hr{
+        display: none;
+    }
+    /* menu */
+    #menu{
+        display: block;
+    }
+    .footer_div form .registar_button{
+        margin-top: 10px;
+    }
+}
