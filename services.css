@@ -21,7 +21,7 @@ main{
 /* header */
 header{
     width: 100%;
-    max-height: 15vh;
+    height: auto;
     display: flex;
     z-index: 3;
     position: sticky;
@@ -317,14 +317,17 @@ nav ul .highlightedLi hr{
 /* style for decoration */
 .decoration{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: justify;
-    align-items: flex-start;
     flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
 }
 .decor{
-    width: 34vw;
+    width: 40%;
+    height: 300px;
 }
 .decor{
     margin: 40px;
@@ -345,8 +348,8 @@ nav ul .highlightedLi hr{
     color: white;
 }
 .decor img{
-    width: 350px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     border: 2px solid rgb(71, 2, 71);
 }
 /* style for decoration ends here*/
@@ -853,9 +856,11 @@ form{
     }
     .overview{
         width: 100%;
+    }.decoration{
+        width: 90%;
     }
     .decor{
-        width: 80%;
+        width: 100%;
     }
     .what_we_do{
         width: 100%;
