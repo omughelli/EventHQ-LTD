@@ -279,7 +279,7 @@ nav ul .highlightedLi hr{
 /* style for slideshow ends here */
 /* style for overview */
 .overview{
-    width: 80%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     word-spacing: 2px;
@@ -302,10 +302,13 @@ nav ul .highlightedLi hr{
 .overview p{
     text-align: justify;
     color: rgb(59, 57, 57);
-    margin: 0 auto;
+    width: 90%;
 }
 #eve{
     display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
 }
 #eve h4{
     color: rgb(59, 57, 57);
