@@ -11,57 +11,40 @@
     padding: 0;
 }
 body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif;
+}
+body p{
+    font-family: 'Raleway','Courier New', Courier, monospace, sans-serif;
 }
 /* header */
 header{
     width: 100%;
     height: auto;
-    display: flex;
-    z-index: 3;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: rgb(71, 2, 71);
-    color: #fff;
 }
 #head{
     width: 100%;
-    height: 100%;
+    height: 10vh;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     padding: 5px;
+    position: absolute;
+    z-index: 1;
 }
 /* logo */
 #logo{
+    width: auto;
     height: 100%;
-    display: flex;
+    padding: 10px;
 }
 #logo-image{
-    width: 35%;
-    height: 100%;
+    width: 15vw;
+    margin: 0 auto;
 }
 #logo-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-#logo-text{
-    height: 100%;
-    margin-top: 5%;
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-}
-#logo-text h1{
-    font-size: 2rem;
-    font-family:monotype corsiva, 'Lora';
-    font-style: italic;
-    margin-bottom: 5px;
-}
-#logo-text p{
-    font-size: .8rem;
-    font-weight: lighter;
 }
 /* navigation */
 nav{
@@ -73,35 +56,30 @@ nav{
 nav ul li{
     display: inline-block;
     padding: 11px;
-    font-size: .9rem;
+    font-size: 1rem;
     font-family: 'Raleway','Courier New', Courier, monospace,Georgia, 'Times New Roman', Times, serif;
     list-style: none;
     transition: all .5s ease-in-out;
+    font-weight: bold;
 }
 nav ul li a{
     color: #fff;
     text-decoration: none;
-}
-nav ul li:hover{
-    background-color: rgb(26, 2, 26);
 }
 nav ul li hr{
     width: 0;
     margin-top: 5px;
     background-color: #fff;
 }
+nav ul li:hover a{
+    color: #fff;
+}
 nav ul li:hover hr{
     animation: .5s underline 1;
     animation-fill-mode: forwards;
 }
-.highlightedLi{
-    background-color: rgb(26, 2, 26);
-}
 nav ul .highlightedLi hr{
     width: 100%;
-}
-.highlightedLi a{
-    color: #fff;
 }
 .highlightedLi hr{
     width: 0;
@@ -123,12 +101,9 @@ nav ul .highlightedLi hr{
     display: none;
 }
 #menu i{
-    padding: 15px;
+    padding: 8px;
     font-size: 2rem;
     border-radius: 10px;
-}
-#menu i:hover{
-    background-color: rgb(42, 1, 42);
 }
 /* header ends here */
 /* style for banner */
@@ -415,7 +390,70 @@ form{
     cursor: pointer;
 } */
 /* style for copy_right ends here */
-@media screen and (max-width:900px){
+@media screen and (max-width: 900px){
+    header{
+        display: flex;
+    }
+    #head{
+        width: 100%;
+    }
+    #menu{
+        width: 10%;
+        align-self: center;
+        margin-left: 10%;
+        display: block;
+    }
+    /* logo */
+    #logo{
+        width: 60%;
+    }
+    #logo-image{
+        width: auto;
+        margin: 0 auto;
+    }
+    /* navigation */
+    nav{
+        width: 100vw;
+        height: auto;
+        background-color: #fff;
+        padding: 0;
+        margin-top: 10px;
+        display: none;
+        animation: 500ms slide-in 1;
+        transition: all .5s ease-in-out;
+    }
+    @keyframes slide-in{
+        0%{
+            width: 0;
+            transform: translateY(-50%);
+        }
+        100%{
+            width: 100vw;
+            transform: translateY(0%);
+        }
+    }
+    nav ul{
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+    }
+    nav ul li a{
+        color: #000;
+    }
+    nav ul li:hover{
+        background-color: rgb(71, 2, 71);
+    }
+    nav ul li a:hover li{
+        background-color: rgb(71, 2, 71);
+    }
+    nav ul li:hover a{
+        color: #fff;
+    }
+    nav ul li hr{
+        display: none;
+    }
     .slider_text h2{
         font-size: 1.2rem;
     }
@@ -450,64 +488,6 @@ form{
     }
     .our_vision_text h3{
         width: 90%;
-    }
-}
-@media screen and (max-width: 900px){
-    #head{
-        flex-direction: column;
-        padding: 0;
-        width: 85%;
-    }
-    /* logo */
-    #logo{
-        width: 100%;
-    }
-    #logo-text h1{
-        font-size: 1.5rem;
-    }
-    #logo-text p{
-        font-size: .5rem;
-    } 
-    /* navigation */
-    nav{
-        width: 100vw;
-        height: auto;
-        background-color: #fff;
-        padding: 0;
-        margin-top: 10px;
-        display: none;
-        animation: 500ms slide-in 1;
-        transition: all .5s ease-in-out;
-    }
-    @keyframes slide-in{
-        0%{
-            width: 0;
-            transform: translateY(-50%);
-        }
-        100%{
-            width: 100vw;
-            transform: translateY(0%);
-        }
-    }
-    nav ul{
-        width: 100%;
-    }
-    nav ul li{
-        display: block;
-        width: 100%;
-    }
-    nav ul li a{
-        color: #000;
-    }
-    nav ul li:hover a{
-        color: #fff;
-    }
-    nav ul li hr{
-        display: none;
-    }
-    /* menu */
-    #menu{
-        display: block;
     }
     .footer_div{
         width: 80%;

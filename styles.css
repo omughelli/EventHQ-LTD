@@ -24,51 +24,31 @@ main{
 header{
     width: 100%;
     height: auto;
-    display: flex;
-    z-index: 3;
-    position: sticky;
-    top: 0;
-    left: 0;
-    color: #fff;
-    background-color: rgb(71, 2, 71);
 }
 #head{
     width: 100%;
-    height: 100%;
+    height: 10vh;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     padding: 5px;
+    position: absolute;
+    z-index: 1;
 }
 /* logo */
 #logo{
+    width: auto;
     height: 100%;
-    display: flex;
+    padding: 10px;
 }
 #logo-image{
-    width: 35%;
-    height: 100%;
+    width: 15vw;
+    margin: 0 auto;
 }
 #logo-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-#logo-text{
-    height: 100%;
-    margin-top: 5%;
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-}
-#logo-text h1{
-    font-size: 2rem;
-    font-family:monotype corsiva, 'Lora';
-    font-style: italic;
-    margin-bottom: 5px;
-}
-#logo-text p{
-    font-size: .8rem;
-    font-weight: lighter;
 }
 /* navigation */
 nav{
@@ -80,17 +60,18 @@ nav{
 nav ul li{
     display: inline-block;
     padding: 11px;
-    font-size: .9rem;
+    font-size: 1rem;
     font-family: 'Raleway','Courier New', Courier, monospace,Georgia, 'Times New Roman', Times, serif;
     list-style: none;
     transition: all .5s ease-in-out;
+    font-weight: bold;
 }
 nav ul li a{
-    color: #fff;
+    color: /* rgb(71, 2, 71) */#fff;
     text-decoration: none;
 }
-nav ul li:hover{
-    background-color: rgb(26, 2, 26);
+nav ul li:hover a{
+    color: #fff;
 }
 nav ul li hr{
     width: 0;
@@ -101,9 +82,9 @@ nav ul li:hover hr{
     animation: .5s underline 1;
     animation-fill-mode: forwards;
 }
-.highlightedLi{
+/* .highlightedLi{
     background-color: rgb(26, 2, 26);
-}
+} */
 nav ul .highlightedLi hr{
     width: 100%;
 }
@@ -130,12 +111,9 @@ nav ul .highlightedLi hr{
     display: none;
 }
 #menu i{
-    padding: 15px;
+    padding: 8px;
     font-size: 2rem;
     border-radius: 10px;
-}
-#menu i:hover{
-    background-color: rgb(42, 1, 42);
 }
 /* slider */
 #slide{
@@ -250,8 +228,8 @@ nav ul .highlightedLi hr{
     background-color: rgb(71, 2, 71);
 }
 /* how may we be of help */
-#how-may-we-be-of-help{
-    width: /* 16% */ auto;
+/* #how-may-we-be-of-help{
+    width:  auto;
     height: auto;
     background-color: rgb(207, 176, 0);
     border-radius: 10px;
@@ -277,9 +255,9 @@ nav ul .highlightedLi hr{
 #how-may-we-be-of-help a{
     color: #fff;
     text-decoration: none;
-}
+} */
 /* got to top */
-#go-to-top{
+/* #go-to-top{
     width: auto;
     height: auto;
     color: #fff;
@@ -298,9 +276,9 @@ nav ul .highlightedLi hr{
 }
 #go-to-top a{
     color: #fff;
-}
+} */
 /* get to know us */
-#get-to-know-us{
+/* #get-to-know-us{
     width: 100%;
     height: 60vh;
     margin-top: 5%;
@@ -389,9 +367,9 @@ nav ul .highlightedLi hr{
     object-fit: cover;
     padding: 5px;
     border-radius: 10px;
-}
+} */
 /* feature */
-#features{
+/* #features{
     width: 100%;
     max-height: 100%;
     margin-top: 3%;
@@ -495,7 +473,6 @@ nav ul .highlightedLi hr{
     padding: 10px;
     background-color: rgb(71, 2, 71);
     color: #fff;
-    /* width: 60%; */
     font-size: 1rem;
     font-family: 'Raleway', 'Courier New', Courier, monospace, sans-serif;
 }
@@ -504,9 +481,9 @@ nav ul .highlightedLi hr{
     outline-color: rgb(71, 2, 71);
     outline-style: solid;
     outline-width: 2px;
-}
+} */
 /* planning of events */
-#planning-events{
+/* #planning-events{
     width: 100%;
     height: 75vh;
     margin-top: 4%;
@@ -608,9 +585,9 @@ nav ul .highlightedLi hr{
 }
 .planning-events-text button:hover{
     background-color: rgb(71, 2, 71);
-}
+} */
 /* our clients */
-#our-recent-works{
+/* #our-recent-works{
     width: 100%;
     height: 100%;
     margin-top: 5%;
@@ -677,17 +654,31 @@ nav ul .highlightedLi hr{
     outline-offset: 2px;
     transform: scale(.9);
 
-}
+} */
 /* contact style */
     #contact-header{
-        position: sticky;
-        top: 0;
-        left: 0;
+        background-color: #fff;
+        display: flex;
+    }
+    #contact-head{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact-logo{
+        width: auto;
+        margin: 0 auto 2% auto;
+    }
+    #contact-logo img{
+        width: 18vw;
     }
 .contact{
     width: 100%;
     height: 100%;
-    margin-top: 8%;
+    margin-top: 4%;
+}
+#contact_nav ul li a{
+    color: rgb(102, 5, 102);
 }
 .contact h2{
     font-family:monotype corsiva, 'Lora';
@@ -886,41 +877,35 @@ form{
 #copy_right p:hover{
     cursor: pointer;
 } */
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
     #get-to-know-us{
         margin-bottom: 15%;
     }
-}
+} */
 @media screen and (max-width: 1000px){
+    
+    header{
+        display: flex;
+    }
     #head{
-        flex-direction: column;
-        padding: 0;
-        width: 85%;
+        width: 100%;
+    }
+    #menu{
+        width: 10%;
+        align-self: center;
+        margin-left: 10%;
     }
     /* logo */
     #logo{
-        width: 100%;
+        width: 60%;
     }
     #logo-image{
-        height: auto;
-        margin-right: 0;
-        padding: 0;
         width: auto;
+        margin: 0 auto;
     }
-    #logo-image img{
-        height: 100%;
-        object-fit: contain;
+    .highlightedLi a{
+        color: #000;
     }
-    #logo-text{
-        margin-left: 10px;
-        padding: 0;
-    }
-    #logo-text h1{
-        font-size: 1.5rem;
-    }
-    #logo-text p{
-        font-size: .5rem;
-    } 
     /* navigation */
     nav{
         width: 80vw;
@@ -949,6 +934,9 @@ form{
         display: block;
         width: 100%;
     }
+    nav ul li:hover{
+        background-color: rgb(102, 5, 102);
+    }
     nav ul li a{
         color: #000;
     }
@@ -963,30 +951,36 @@ form{
         display: block;
     }
     /* fetures */
-    #features{
+    /* #features{
         margin-top: 15%;
     }
     .features{
         width: 45%;
         margin-bottom: 5%;
-    }
+    } */
 }
 @media screen and (max-width: 900px){
+    
+    header{
+        display: flex;
+    }
     #head{
-        flex-direction: column;
-        padding: 0;
-        width: 85%;
+        width: 100%;
+    }
+    #menu{
+        width: 10%;
+        align-self: center;
+        margin-left: 10%;
+        display: block;
     }
     /* logo */
     #logo{
-        width: 100%;
+        width: 66%;
     }
-    #logo-text h1{
-        font-size: 1.5rem;
+    #logo-image{
+        width: auto;
+        margin: 0 auto;
     }
-    #logo-text p{
-        font-size: .5rem;
-    } 
     /* navigation */
     nav{
         width: 100vw;
@@ -1018,15 +1012,17 @@ form{
     nav ul li a{
         color: #000;
     }
+    nav ul li:hover{
+        background-color: rgb(71, 2, 71);
+    }
+    nav ul li a:hover li{
+        background-color: rgb(71, 2, 71);
+    }
     nav ul li:hover a{
         color: #fff;
     }
     nav ul li hr{
         display: none;
-    }
-    /* menu */
-    #menu{
-        display: block;
     }
     /* slider */
     .slider_text h2{
@@ -1037,8 +1033,30 @@ form{
     .slider_text p{
         font-size: .9rem;
     }
+    /* contact */
+    #contact-menu{
+        margin-right: 5%;
+    }
+    #contact-logo{
+        margin: 0;
+    }
+    #contact-logo img{
+        width: 60vw;
+    }
+    #contact{
+        flex-direction: column;
+    }
+    .contact_text{
+        width: 100%;
+    }
+    .contact_image{
+        width: 100%;
+    }
+    .contact_text fieldset{
+        width: 100%;
+    }
     /* get to know us */
-    #get-to-know-us{
+   /*  #get-to-know-us{
         width: 100%;
         height: 100%;
     }
@@ -1048,9 +1066,9 @@ form{
     }
     .get-to-know-us-image{
         width: 100%;
-    }
+    } */
     /* fetures */
-    #features{
+    /* #features{
         margin-top: 8%;
     }
     .features{
@@ -1061,12 +1079,12 @@ form{
         width: 10%;
         height: 7px;
         margin-top: 4%;
-    }
+    } */
     /* .features_button button{
         width: 30%;
     } */
     /* planning events */
-    #planning-events-slide{
+    /* #planning-events-slide{
         width: 100%;
     }
     .planning-events-text h2{
@@ -1074,18 +1092,18 @@ form{
     }
     .planning-events-text p{
         font-size: .9rem;
-    }
+    } */
     /* our clients */
-    .our-recent-works-images{
+    /* .our-recent-works-images{
         width: 100%;
-    }
+    } */
     /* .our-recent-work-button button{
         padding: 10px;
         width: 50%;
         font-size: 1rem;
     } */
     /* contact style */
-    .contact_text{
+    /* .contact_text{
         width: 100%;
     }
     .contact_text p{
@@ -1111,7 +1129,7 @@ form{
     }
     .contact_image{
         width: 100%;
-    }
+    } */
     /* footer */
     .footer_div{
         width: 80%;
